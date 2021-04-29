@@ -1,0 +1,7 @@
+outlabp1doc module
+==================
+
+.. automodule:: outlabp1doc
+    :members:
+    :undoc-members:
+    :show-inheritance:

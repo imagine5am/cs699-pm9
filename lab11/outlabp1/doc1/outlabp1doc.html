@@ -1,0 +1,182 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>outlabp1doc module &#8212; outlabp1 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-outlabp1doc">
+<span id="outlabp1doc-module"></span><h1>outlabp1doc module<a class="headerlink" href="#module-outlabp1doc" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-outlabp1doc"></span><dl class="function">
+<dt id="outlabp1doc.activate">
+<code class="descclassname">outlabp1doc.</code><code class="descname">activate</code><span class="sig-paren">(</span><em>weights</em>, <em>inputs</em><span class="sig-paren">)</span><a class="headerlink" href="#outlabp1doc.activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates Z(W*X) of a layer in neural network</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>weights</strong> (<em>float</em>) – weight vector of given layer</li>
+<li><strong>inputs</strong> (<em>float</em>) – input to current layer</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Z values of each layer(Z=w*x)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outlabp1doc.forward_propagate">
+<code class="descclassname">outlabp1doc.</code><code class="descname">forward_propagate</code><span class="sig-paren">(</span><em>network</em>, <em>row</em><span class="sig-paren">)</span><a class="headerlink" href="#outlabp1doc.forward_propagate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does forward propagation to calculate activations of all layers</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>network</strong> (<em>network</em>) – neural network object</li>
+<li><strong>row</strong> (<em>float</em>) – input for entire network</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">predicted y values after forward propogation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outlabp1doc.initialize_network">
+<code class="descclassname">outlabp1doc.</code><code class="descname">initialize_network</code><span class="sig-paren">(</span><em>n_inputs</em>, <em>n_hidden</em>, <em>n_outputs</em><span class="sig-paren">)</span><a class="headerlink" href="#outlabp1doc.initialize_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes weights in a neural network</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>n_inputs</strong> (<em>integer</em>) – number of input nodes</li>
+<li><strong>n_hidden</strong> (<em>integer</em>) – number of hidden layers</li>
+<li><strong>n_outputs</strong> (<em>integer</em>) – number of output nodes</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">network object with weights initialized</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outlabp1doc.transfer">
+<code class="descclassname">outlabp1doc.</code><code class="descname">transfer</code><span class="sig-paren">(</span><em>activation</em><span class="sig-paren">)</span><a class="headerlink" href="#outlabp1doc.transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates activation(input to next layer) neural network</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>activation</strong> (<em>float</em>) – output of current layer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">activations of each layer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outlabp1doc.transfer_derivative">
+<code class="descclassname">outlabp1doc.</code><code class="descname">transfer_derivative</code><span class="sig-paren">(</span><em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#outlabp1doc.transfer_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns derivative of activation function</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>output</strong> (<em>float</em>) – output of current layer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">gradient of activation function</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Akhil.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/outlabp1doc.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

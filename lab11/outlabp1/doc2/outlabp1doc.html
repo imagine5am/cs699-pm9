@@ -1,0 +1,144 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>outlabp1doc module &#8212; outlabp1 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-outlabp1doc">
+<span id="outlabp1doc-module"></span><h1>outlabp1doc module<a class="headerlink" href="#module-outlabp1doc" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-outlabp1doc"></span><dl class="function">
+<dt id="outlabp1doc.backward_propagate_error">
+<code class="descclassname">outlabp1doc.</code><code class="descname">backward_propagate_error</code><span class="sig-paren">(</span><em>network</em>, <em>expected</em><span class="sig-paren">)</span><a class="headerlink" href="#outlabp1doc.backward_propagate_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates delta for entire network</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>network</strong> (<em>network</em>) – neural network object</li>
+<li><strong>expected</strong> (<em>float</em>) – actual value of given data</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outlabp1doc.train_network">
+<code class="descclassname">outlabp1doc.</code><code class="descname">train_network</code><span class="sig-paren">(</span><em>network</em>, <em>train</em>, <em>l_rate</em>, <em>n_epoch</em>, <em>n_outputs</em><span class="sig-paren">)</span><a class="headerlink" href="#outlabp1doc.train_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train a network for a fixed number of epochs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>network</strong> (<em>network</em>) – neural network object</li>
+<li><strong>train</strong> (<em>float</em>) – input for entire network to train</li>
+<li><strong>l_rate</strong> (<em>float</em>) – learning rate of network</li>
+<li><strong>n_epoch</strong> (<em>integer</em>) – no of epochs</li>
+<li><strong>n_outputs</strong> (<em>intger</em>) – number of output nodes</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outlabp1doc.update_weights">
+<code class="descclassname">outlabp1doc.</code><code class="descname">update_weights</code><span class="sig-paren">(</span><em>network</em>, <em>row</em>, <em>l_rate</em><span class="sig-paren">)</span><a class="headerlink" href="#outlabp1doc.update_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates weights of layers in network</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>network</strong> (<em>network</em>) – neural network object</li>
+<li><strong>row</strong> (<em>float</em>) – input for entire network</li>
+<li><strong>l_rate</strong> (<em>float</em>) – learning rate of network</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Akhil.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/outlabp1doc.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
